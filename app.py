@@ -9,51 +9,46 @@ st.set_page_config(page_title="Promotion Dashboard — Pratyush Ranjan", page_ic
 # ---------- Styles ----------
 st.markdown("""
 <style>
-body { background-color: #fff5f7; }
-.block-container { max-width: 1200px; background-color: #ffeef2; padding: 20px; border-radius: 12px; }
+/* Exterior (outside content) gets 50% opacity of FCFBF7 */
+html, body, [data-testid="stAppViewContainer"], .main {
+    background-color: rgba(252, 251, 247, 0.5) !important; /* #FCFBF7 @ 50% */
+}
 
-/* Headline chips */
+/* Interior content area stays solid */
+.block-container { 
+    max-width: 1200px; 
+    background-color: #FCFBF7;
+}
+
+/* Optional utility classes from your earlier design */
+.card { background:#fff; border:1px solid #e5e7eb; border-radius:16px; padding:16px; box-shadow:0 1px 3px rgba(0,0,0,.04); }
+.card:hover { box-shadow:0 10px 28px rgba(0,0,0,.06); transition:box-shadow .12s ease; }
+.hero { padding:22px 26px; border-radius:18px; background:linear-gradient(135deg,#4F46E520,#06B6D420); border:1px solid #e5e7eb; }
+.kpi { text-align:center; padding:16px; border-radius:14px; border:1px solid #e5e7eb; background:#fff; }
+.kpi h3 { margin:2px 0 0 0; font-size:28px; }
+.kpi p { margin:0; color:#64748B; font-size:12px; }
 .pill { display:inline-flex; align-items:center; gap:6px; padding:6px 12px; border-radius:999px; background:#4F46E515; color:#4F46E5; font-weight:600; font-size:12px; margin-right:6px; }
-
-/* Section headings */
-.section-title { font-size:20px; font-weight:700; margin:0; }
-
-/* Tag & badges */
+.subhead { font-weight:700; margin:.35rem 0 .15rem 0; }
+.indent { margin-left:.75rem; }
+.section-title { font-size:20px; font-weight:700; margin:0 0 8px 0; }
 .tag { display:inline-block; font-size:12px; padding:3px 8px; border-radius:999px; border:1px solid #e5e7eb; margin-right:6px; color:#475569; }
 .badge { display:inline-block; font-size:11px; padding:2px 8px; border-radius:999px; }
 .badge-was { background:#fee2e2; color:#b91c1c; border:1px solid #fecaca; }
 .badge-now { background:#dcfce7; color:#166534; border:1px solid #bbf7d0; }
+.testimonial { background:#f8fafc; border:1px solid #e5e7eb; border-radius:16px; padding:16px; }
 blockquote { margin:0; font-size:14px; color:#334155; }
-
-/* Achievements chips (for the detailed section) */
 .achip { display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid #e5e7eb; border-radius:999px; background:#ffffff; margin:6px 8px 0 0; }
 .achip b { margin-right:2px; }
 .ach-grid { display:flex; flex-wrap:wrap; }
+hr { border: none; border-top: 1px solid #e5e7eb; margin: 10px 0; }
 
-/* Clean dark divider line between headings/sections */
+/* Dark divider used between sections (kept from previous versions) */
 .divider-dark { height: 2px; background: #444; margin: 10px 0 16px 0; border-radius: 999px; }
 
-/* Prominent styling ONLY for this page's st.tabs block */
-.stTabs [data-baseweb="tab-list"] {
-    gap: 8px;
-    background-color: #fde2e7;
-    padding: 8px 10px;
-    border-radius: 12px;
-    border-bottom: 0 !important;
-    margin-bottom: 14px; /* extra space under tabs */
-}
-.stTabs [data-baseweb="tab"] {
-    font-size: 16px;
-    font-weight: 700;
-    padding: 8px 14px;
-    border-radius: 10px;
-}
-.stTabs [aria-selected="true"] {
-    background-color: #ec4899;
-    color: #fff;
-}
+@media (max-width: 900px){ .block-container{ padding-left:14px; padding-right:14px; } }
 </style>
 """, unsafe_allow_html=True)
+
 
 # ---------- Load content ----------
 def load_content(path="data/content.json"):
@@ -169,14 +164,20 @@ timeline_gantt(C.get("timeline_ranges", []))
 highs = C.get("highlights", []) or derive_highlights(C)
 st.markdown("<div class='section-title'>Highlights</div>", unsafe_allow_html=True)
 st.markdown("<div class='divider-dark'></div>", unsafe_allow_html=True)
+
 if highs:
+    # 3 columns on desktop; Streamlit will stack on small screens
+    num_cols = min(3, len(highs))
+    cols = st.columns(num_cols)
     for i, h in enumerate(highs):
-        st.markdown(f"**{h.get('title','')}**")
-        meta=h.get("metric","");  ctx=h.get("context","")
-        if meta: st.markdown(f"<span class='tag'>{meta}</span>", unsafe_allow_html=True)
-        if ctx:  st.markdown(f"<div style='margin:.25rem 0 .5rem 0; color:#475569;'>{ctx}</div>", unsafe_allow_html=True)
-        if i != len(highs)-1:
-            st.markdown("<div class='divider-dark' style='opacity:.25; height:1px;'></div>", unsafe_allow_html=True)
+        with cols[i % num_cols]:
+            st.markdown(f"**{h.get('title','')}**")
+            meta = h.get("metric", "")
+            ctx  = h.get("context", "")
+            if meta:
+                st.markdown(f"<span class='tag'>{meta}</span>", unsafe_allow_html=True)
+            if ctx:
+                st.markdown(f"<div style='margin:.25rem 0 1rem 0; color:#475569;'>{ctx}</div>", unsafe_allow_html=True)
 else:
     st.info("No highlights available.")
 
@@ -199,16 +200,29 @@ if matrix:
 else:
     st.info("No KPI details available.")
 
-# ---------- Certifications & Achievements ----------
+# ---------- Certifications & Achievements (columns) ----------
+ach = C.get("achievements", [])
 if ach:
-    st.subheader("Certifications & Achievements")
+    st.markdown("<div class='section-title'>Certifications & Achievements</div>", unsafe_allow_html=True)
     st.markdown("<div class='divider-dark'></div>", unsafe_allow_html=True)
-    for a in ach:
-        icon=a.get("icon","🎓"); title=a.get("title",""); issuer=a.get("issuer",""); when=a.get("date",""); note=a.get("note",""); link=a.get("link")
-        line = f"{icon} **{title}** — {issuer}" + (f" · {when}" if when else "")
-        if link: line = f"[{line}]({link})"
-        extra = f"<br/><span style='color:#475569'>{note}</span>" if note else ""
-        st.markdown(f"- {line}{extra}", unsafe_allow_html=True)
+    
+    num_cols = min(3, len(ach))  # up to 3 per row
+    cols = st.columns(num_cols)
+    
+    for i, a in enumerate(ach):
+        with cols[i % num_cols]:
+            icon = a.get("icon", "🎓")
+            title = a.get("title", "")
+            issuer = a.get("issuer", "")
+            when = a.get("date", "")
+            note = a.get("note", "")
+            link = a.get("link")
+            label = f"{icon} **{title}** — {issuer}" + (f" · {when}" if when else "")
+            if link:
+                label = f"[{label}]({link})"
+            st.markdown(label, unsafe_allow_html=True)
+            if note:
+                st.markdown(f"<span style='color:#475569'>{note}</span>", unsafe_allow_html=True)
 
     # --- Add testimonial QUOTE + NAME/ORG as a small italic sub-section ---
     fs = C.get("feedback_section", {})
@@ -232,7 +246,7 @@ if ach:
             tail = f" — **{org_text}**"
         st.markdown(f"> “{quote_text}”{tail}")
 
-# ---------- Tabs (PROMINENT): Feedback + Growth Plan ----------
+# ---------- Tabs: Feedback + Growth Plan ----------
 tabs = st.tabs(["Feedback", "Growth Plan"])
 
 with tabs[0]:
