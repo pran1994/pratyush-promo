@@ -1,0 +1,262 @@
+{
+  "name": "Pratyush Ranjan",
+  "summary": "Turning data into client impact: leading reporting workstreams, aligning tech with business, and shipping under pressure.",
+  "metrics": [
+    [
+      "18",
+      "Senior Stakeholders Managed"
+    ],
+    [
+      "3",
+      "Pre-sales Pitches"
+    ],
+    [
+      "2",
+      "Regulatory Dashboards"
+    ]
+  ],
+  "achievements": [
+    {
+      "icon": "🎓",
+      "title": "Databricks GenAI Associate",
+      "issuer": "Databricks",
+      "date": "Feb 2025",
+      "note": "Validated ability to evaluate and implement LLM-powered solutions.",
+      "link": ""
+    },
+    {
+      "icon": "🏆",
+      "title": "AWS GenAI Hackathon — 3rd Place",
+      "issuer": "AWS",
+      "date": "Nov 2024",
+      "note": "Built a real-time financial assistant chatbot (dynamic SQL + contextual insights).",
+      "link": ""
+    }
+  ],
+  "timeline_ranges": [
+    {
+      "lane": "Client — Australia Post",
+      "start": "2024-05-01",
+      "end": "2025-02-28",
+      "label": "Australia Post"
+    },
+    {
+      "lane": "Internal — Bench & GenAI",
+      "start": "2025-02-28",
+      "end": "2025-03-15",
+      "label": "Bench + GenAI Certification"
+    },
+    {
+      "lane": "Client — IAG",
+      "start": "2025-03-15",
+      "end": "2025-07-15",
+      "label": "IAG — SVOF ELT"
+    },
+    {
+      "lane": "Client — AEMO (Pre‑sales)",
+      "start": "2025-07-01",
+      "end": "2025-07-23",
+      "label": "AEMO Sales Pitch"
+    },
+    {
+      "lane": "Internal — dbt Pathway",
+      "start": "2025-07-01",
+      "end": null,
+      "label": "DBT Pathway (ongoing)"
+    }
+  ],
+  "feedback": [
+    {
+      "tag": "Client Focus",
+      "text": "Understands stakeholder needs and adapts delivery with clear trade-off communication."
+    },
+    {
+      "tag": "Ownership",
+      "text": "Steps in during ambiguity, runs stand-ups, and keeps momentum without heavy oversight."
+    },
+    {
+      "tag": "Judgement",
+      "text": "Uses structured thinking to diagnose issues (grain/GDP/GST) and prioritises correctly under time pressure."
+    }
+  ],
+  "feedback_section": {
+    "good": [
+      {
+        "title": "Trusted delivery lead across multi‑stakeholder environments",
+        "context": "Ran AP reporting workstream end‑to‑end; established cadence, locked requirements in Confluence, and handed off cleanly to client team.",
+        "tag": "Delivery Leadership",
+        "evidence_points": [
+          "Australia Post — led reporting/dashboarding workstream from inception to handover; aligned delivery to business expectations.",
+          "Structured requirement‑gathering; consolidated SME inputs in Confluence; proactively secured sign‑off across teams.",
+          "Designed workable solutions within DOMO migration constraints without upstream engineering changes."
+        ]
+      },
+      {
+        "title": "Clear, audience‑aware communication",
+        "context": "Business storytelling at SteerCo vs. technical deep‑dives with SMEs; live walkthroughs to capture & apply feedback real‑time.",
+        "tag": "Communication",
+        "evidence_points": [
+          "AP — Presented regularly to Program Sponsor/Manager + SMEs; adapted style to technical depth.",
+          "SteerCo‑style roll‑off doc summarising delivery, expectations, and recommendations for AP internal team.",
+          "Live dashboard/logic walkthroughs with real‑time feedback integration."
+        ]
+      },
+      {
+        "title": "Structured problem solving under pressure",
+        "context": "IAG SVOF ELT: diagnosed grain misalignment (GDP/GST), reworked transformation flow with LDAE, and kept stakeholders aligned.",
+        "tag": "Problem Solving",
+        "evidence_points": [
+          "Identified mismatch in grain between Mantel & KPMG logic during GDP transformation; fixed to stabilise downstream calcs.",
+          "Restructured ELT flow with LDAE to ensure correct logic & grain for ATO reporting.",
+          "Used SQL + GenAI to accelerate GST debugging; maintained momentum while reducing extended QA cycles."
+        ]
+      }
+    ],
+    "improve": [
+      {
+        "title": "Broaden DS/ML exposure beyond analytics & ELT",
+        "was": "Earlier feedback suggested increasing hands‑on involvement in DS/ML initiatives.",
+        "now": "Contributed to AI/ML pre‑sales (AEMO) and built an internal enablement path to support consultants; applying advanced analysis patterns in delivery.",
+        "evidence_points": [
+          "AEMO — led proposal direction and prepared tailored deck; advanced pre‑sales discussion.",
+          "Internal enablement — created materials/patterns to guide consultants on AI/ML use‑cases."
+        ]
+      },
+      {
+        "title": "Proactive stakeholder updates during blockers",
+        "was": "Need to ensure consistent, transparent updates to keep momentum when leads are unavailable.",
+        "now": "At IAG, stepped in during Adam’s leave: ran stand‑ups, chased KPMG on Huon inputs, set clear expectations on roles/dependencies, maintained delivery pace.",
+        "evidence_points": [
+          "Hosted stand‑ups; created/maintained blocker lists; followed up with KPMG on premium‑table inputs.",
+          "Escalated missing data to vendor instead of backfilling internally to protect data integrity."
+        ]
+      },
+      {
+        "title": "Strengthen commercial craft",
+        "was": "Limited track record on leading proposals end‑to‑end.",
+        "now": "Drove direction for AEMO proposal (tailored slides + Confluence pack) and supported EPA/TfNSW RFQs; clarified delivery approach, timelines, and outcomes.",
+        "evidence_points": [
+          "AEMO — created client‑specific slides + Confluence to articulate approach and outcomes.",
+          "EPA/TfNSW — contributed to scoping and assumptions by gathering inputs from principals and delivery leads."
+        ]
+      },
+      {
+        "title": "Deepen technical depth (Adam’s feedback)",
+        "was": "Manager feedback highlighted the need to become more technical to operate at the next level.",
+        "now": "Bridging that gap by pursuing dbt Architect certification and leading the internal ‘dbt Pathway’ initiative.",
+        "evidence_points": [
+          "Internal — curated dbt Pathway and applied dbt design patterns for reuse.",
+          "Active study plan towards dbt certification, aligning with current IAG/AP transformation experience."
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "Leah Feng",
+        "title": "Insights Analyst",
+        "org": "Australia Post",
+        "quote": "A special shout-out to Avi and Pratyush… it’s been great collaborating with you both.",
+        "image": "data/assets/leah_ap_thanks.png",
+        "image_caption": "Client email — Australia Post"
+      }
+    ]
+  },
+  "matrix": {
+    "Overview": [
+      "Australia Post:",
+      "Led the reporting and dashboarding workstream from inception to handover. Initiated early stakeholder discussions, defined dashboard logic across multiple teams, and ensured delivery was aligned with business expectations and ready for client ownership post-rolloff.",
+      "Drove clarity across technical and business teams by initiating structured requirement-gathering sessions. Used Confluence to consolidate SME inputs and proactively secured sign-off, ensuring expectations were locked early and aligned across teams.",
+      "Balanced technical limitations (DOMO platform migration constraints) with business reporting needs. Identified gaps, collaborated with SMEs, and designed workarounds that maintained dashboard functionality without requiring upstream engineering changes.",
+      "IAG:",
+      "Took full ownership of the SVOF (Single View of Finance) data transformation stream. Independently mapped ELT layers from Greenplum to GDP and resolved transformation bottlenecks, ensuring accurate financial data flows to meet reporting deadlines.",
+      "Leveraged GenAI tooling and SQL fluency to accelerate logic development and reduce delivery time. Saved significant project hours by proactively identifying automation opportunities and implementing them without external dependency."
+    ],
+    "Relationship Building": [
+      "AusPost:",
+      "Built strong, trust-based relationships with multiple SMEs and team leads across reporting and data transformation teams. Took the lead in cross-functional requirement workshops, ensured voices were heard across different business units, and followed up rigorously for sign-offs. Even in technically constrained situations, maintained a client-first approach by proposing feasible alternatives and communicating limitations transparently to demonstrate accountability.",
+      "IAG:",
+      "Maintained consistent engagement with IAG's internal stakeholders and external vendor KPMG throughout the SVOF delivery. When Adam was unavailable due to personal leaves, I proactively stepped in to handle ongoing communication, hosting stand-ups, addressing blockers, and following up on critical tasks. This built confidence in my ability to represent Mantel’s interests independently while maintaining momentum across all parties.",
+      "Internal:",
+      "I have been a part of D&AI catchups as well where I have hosted different types of meetings. Moreover, right after joining Mantel, I got myself enrolled into GenAI hackathon with the team members to break the ice and get a chance to know the team deeply."
+    ],
+    "Problem Solving": [
+      "AusPost:",
+      " Built strong relationships across reporting SMEs and data transformation teams by leading cross-functional requirement-gathering sessions.",
+      "Facilitated alignment across business units by documenting inputs in Confluence and proactively securing formal sign-offs from each stakeholder.",
+      "Maintained trust and clarity by communicating platform limitations early and working collaboratively with stakeholders to agree on feasible alternatives.",
+      "Helped prevent delivery friction by creating a shared understanding of scope, earning credibility as a reliable and empathetic delivery lead.",
+      "IAG:",
+      "Identified a mismatch in grain between Mantel’s and KPMG’s logic during the GDP transformation in the SVOF ELT build, which was leading to discrepancies in downstream calculations.",
+      "Collaborated with the Lead Data Analytics Engineer to step back and restructure the ELT transformation flow, ensuring both the correct logic and grain were applied consistently for ATO reporting.",
+      "Used SQL and GenAI tools to rapidly test and debug the GST layer under tight timelines, maintaining delivery momentum while reducing reliance on extended QA cycles.",
+      "Kept the IAG analyst team and key stakeholders informed throughout the debugging process — demonstrating independent ownership and structured problem solving under pressure."
+    ],
+    "Communication": [
+      "Australia Post:",
+      " Presented work regularly to the Program Sponsor, Program Manager, and different SMEs, adapting communication style based on their level of technical involvement.",
+      " Used business-facing storytelling when presenting to leadership, and technical deep-dives when collaborating with SMEs — ensuring clarity across stakeholder types.",
+      " Led live walkthroughs of dashboards and logic during meetings, often capturing and applying feedback in real time to foster trust and alignment.",
+      " Created a SteerCo-style document prior to roll-off that summarised delivery progress, clarified stakeholder expectations, and outlined recommendations for the internal AP team to maintain and update dashboards post-handover."
+    ],
+    "Commercial Craft": [
+      "Pre-sales:",
+      "Contributed to three pre-sales conversations: AEMO, EPA Litter Data Dashboard, and TfNSW RFQ.",
+      "Took an active role in defining scope by reaching out to team members and principal consultants to gather delivery inputs.",
+      "For AEMO, led the direction of the proposal by creating thorough presentation slides tailored to client needs.",
+      "Created a set of Confluence pages to support client understanding of delivery approach, timelines, and outcomes, helping drive pre-sales conversations forward with clarity.",
+      "IAG:",
+      "Joined the SVOF project at a critical time and quickly developed an understanding of the interdependencies between IAG and KPMG, especially around GDP delivery.",
+      "Identified issues in Huon’s premium table logic, where delays and gaps in KPMG’s inputs were impacting downstream processing.",
+      "Set clear expectations with IAG about Mantel’s role vs. KPMG’s responsibility, ensuring accountability was maintained across vendors.",
+      "Decided not to backfill the missing data internally, despite capability, and instead escalated to KPMG to resolve — preventing quality compromise and future data conflicts under time pressure."
+    ],
+    "Data & AI SME Expertise": [
+      "Strategy Development:",
+      "Designed and delivered AEMO’s AI use-case prioritisation framework, aligning technical capabilities with strategic goals and enabling focus on high-impact initiatives.",
+      "Refined AI prioritisation approach through structured analysis of feasibility, value, urgency, and synergy, improving initiative selection and long-term alignment.",
+      "Mapped stakeholder ecosystem, delivery roles, and data readiness requirements, enhancing planning accuracy and reducing ad-hoc decision-making.",
+      "Created end-to-end strategic narrative and supporting materials (Confluence docs, executive deck) that secured stakeholder buy-in for scaled AI adoption.",
+      "Transformation Management:",
+      "Australia Post:",
+      "Delivered regulatory-compliant reporting dashboards using DOMO’s Magic ETL and SQL Dataflow, aligned with Safe Work Australia guidelines to ensure accuracy, compliance, and usability.",
+      "Managed full dashboard lifecycle — handover to internal teams, hypercare support, and stakeholder transition management — ensuring seamless adoption.",
+      "Incorporated iterative feedback into DOMO dashboards, optimised data models, and implemented modular ETL design with stakeholder-informed visualisation enhancements to improve performance and maintainability.",
+      "IAG:",
+      "Translated complex regulatory finance requirements into a scalable data pipeline and reporting model, engaging finance, risk, and compliance stakeholders throughout delivery.",
+      "Engineered the Single View of Finance (SVOF) framework using DBT for ELT orchestration and Google Cloud Platform (GCP) for scalable processing, adhering to ATO compliance and internal governance standards.",
+      "Aligned data engineering workflows with business strategy by ensuring transformation logic, grain alignment, and validation rules supported accurate downstream reporting — delivering measurable impact and high stakeholder confidence.",
+      "Analytics:",
+      "Independently handled complex data preparation and transformation tasks across both clients. At IAG, developed end-to-end DBT pipelines to ingest and conform disparate financial data sources into a unified reporting model on GCP — standardising naming conventions, data types, and logic for downstream use. At Australia Post, used DOMO’s Magic ETL and SQL Dataflow to clean, aggregate, and enrich injury data across multiple dimensions. These efforts ensured high data quality and analytical reliability, enabling regulatory reporting and actionable insights without dependency on engineering teams.",
+      "At IAG, applied hypothesis-driven analysis to validate the effectiveness of a unified finance data model — testing data lineage assumptions, reconciling source discrepancies, and evaluating conformity with ATO compliance logic. At Australia Post, led the analytical design of dashboards capturing injury trends, facilitating diagnostic insights into root causes by dimensions like incident type, location, and claim severity. Guided internal and client teams in framing analysis goals, ensuring that both descriptive and diagnostic layers were aligned to business needs and regulatory objectives.",
+      "Reporting & Visualisation:",
+      "Designed and implemented interactive DOMO dashboards that visualised the full injury lifecycle — from incident location and type to claims paid and recovery strategies. These visualisations translated complex datasets into actionable insights for Safe Work compliance and internal safety initiatives. Regularly worked with stakeholders to refine visual outputs based on operational needs, enabling proactive interventions and informed decision-making across health and safety teams.",
+      "Data Science & Machine Learning:",
+      "Identified high-impact opportunities to apply machine learning by developing a GenAI enablement pathway for internal consultants and contributing to AI/ML pre-sales initiatives.",
+      "Capable of independently contributing to Data Science and ML projects by framing problems, preparing data, and developing proof-of-concept models grounded in business value. While I can deliver with autonomy, I actively seek alignment and technical direction from senior Data Scientists or ML Engineers during advanced model development and deployment phases to ensure robustness and scalability."
+    ]
+  },
+  "growth": [
+    "Lead full presales proposals end-to-end (discovery → scoping → proposal).",
+    "Drive SteerCo-style engagements more frequently in a consulting context.",
+    "Increase involvement in DS/ML delivery to complement ELT/reporting strengths.",
+    "Bridge the technical gap highlighted in feedback by pursuing dbt Certified Developer and Architect certifications, enhancing my ability to design, optimise, and govern data transformation pipelines at scale.",
+    "Strengthen AI/ML technical capability via Databricks GenAI Associate (featured above) and real-world application (incl. 3rd place at AWS GenAI Hackathon)."
+  ],
+  "highlights": [
+    {
+      "title": "Strategic Deliveries",
+      "metric": "2 high-impact projects",
+      "context": "Delivered business-critical solutions on time with smooth BAU transitions."
+    },
+    {
+      "title": "Operational Efficiency Gains",
+      "metric": "Reduced manual code changes to legacy code using LLM",
+      "context": "Leveraged LLM-powered code translation to automate and simplify complex ETL scripts for legacy source systems, reducing manual development effort by 70% and accelerating time-to-insight for business stakeholders."
+    },
+    {
+      "title": "Internal Initiatives",
+      "metric": "Pathway to learn dbt (WIP)",
+      "context": "Designed a structured learning pathway for teams to adopt dbt, including curated resources, onboarding guides, and example projects. This initiative is currently a work in progress."
+    }
+  ]
+}
