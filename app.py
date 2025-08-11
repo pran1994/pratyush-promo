@@ -276,7 +276,7 @@ with tabs[0]:
                         st.markdown(evs)
 
     if improve:
-        st.markdown("#### Working on Feedback")
+        st.markdown("#### Focus Areas")
         st.markdown("<div class='divider-dark' style='opacity:.3;'></div>", unsafe_allow_html=True)
         for card in improve:
             st.markdown(f"**{card.get('title','')}**")
@@ -293,7 +293,7 @@ with tabs[0]:
                         st.markdown(evs)
 
 with tabs[1]:
-    st.subheader("Growth Plan")
+    st.subheader("Growth Plan (Keeping Mantel's 2030 vision of keeping an AI centric approach for better market offerings)")
     for g in C.get("growth", []):
         st.markdown(f"- {g}")
 

@@ -79,36 +79,46 @@
       "text": "Uses structured thinking to diagnose issues (grain/GDP/GST) and prioritises correctly under time pressure."
     }
   ],
-  "feedback_section": {
+"feedback_section": {
     "good": [
       {
-        "title": "Trusted delivery lead across multi‑stakeholder environments",
-        "context": "Ran AP reporting workstream end‑to‑end; established cadence, locked requirements in Confluence, and handed off cleanly to client team.",
+        "title": "Trusted delivery lead across multi-stakeholder environments",
+        "context": "Ran AP reporting workstream end-to-end; established cadence, locked requirements in Confluence, and handed off cleanly to client team.",
         "tag": "Delivery Leadership",
         "evidence_points": [
           "Australia Post — led reporting/dashboarding workstream from inception to handover; aligned delivery to business expectations.",
-          "Structured requirement‑gathering; consolidated SME inputs in Confluence; proactively secured sign‑off across teams.",
+          "Structured requirement-gathering; consolidated SME inputs in Confluence; proactively secured sign-off across teams.",
           "Designed workable solutions within DOMO migration constraints without upstream engineering changes."
         ]
       },
       {
-        "title": "Clear, audience‑aware communication",
-        "context": "Business storytelling at SteerCo vs. technical deep‑dives with SMEs; live walkthroughs to capture & apply feedback real‑time.",
+        "title": "Clear, audience-aware communication",
+        "context": "Business storytelling at SteerCo vs. technical deep-dives with SMEs; live walkthroughs to capture & apply feedback real-time.",
         "tag": "Communication",
         "evidence_points": [
           "AP — Presented regularly to Program Sponsor/Manager + SMEs; adapted style to technical depth.",
-          "SteerCo‑style roll‑off doc summarising delivery, expectations, and recommendations for AP internal team.",
-          "Live dashboard/logic walkthroughs with real‑time feedback integration."
+          "SteerCo-style roll-off doc summarising delivery, expectations, and recommendations for AP internal team.",
+          "Live dashboard/logic walkthroughs with real-time feedback integration."
         ]
       },
       {
         "title": "Structured problem solving under pressure",
-        "context": "IAG SVOF ELT: diagnosed grain misalignment (GDP/GST), reworked transformation flow with LDAE, and kept stakeholders aligned.",
+        "context": "IAG SVOF ELT: diagnosed grain misalignment (GDP/GST), reworked transformation flow with Lead Analytics Engineer, and kept stakeholders aligned.",
         "tag": "Problem Solving",
         "evidence_points": [
           "Identified mismatch in grain between Mantel & KPMG logic during GDP transformation; fixed to stabilise downstream calcs.",
-          "Restructured ELT flow with LDAE to ensure correct logic & grain for ATO reporting.",
+          "Restructured ELT flow with Lead Analytics Engineer to ensure correct logic & grain for ATO reporting.",
           "Used SQL + GenAI to accelerate GST debugging; maintained momentum while reducing extended QA cycles."
+        ]
+      },
+      {
+        "title": "Innovative use of AI/ML in delivery",
+        "context": "Applied GenAI solutions to streamline complex ETL processes, accelerating delivery while maintaining quality.",
+        "tag": "Innovation",
+        "evidence_points": [
+          "At IAG, leveraged LLM-powered code translation to automate legacy ETL logic updates, reducing manual effort by 70%.",
+          "Integrated AI-assisted debugging in GDP/GST transformations, cutting QA cycles significantly.",
+          "Demonstrated how emerging AI tools can be embedded into delivery workflows without disrupting BAU."
         ]
       }
     ],
