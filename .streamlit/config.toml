@@ -1,0 +1,7 @@
+[theme]
+base = "light"                       # forces light theme as the default
+primaryColor = "#4F46E5"             # buttons/links
+backgroundColor = "#FCFBF7"          # page background (your cream)
+secondaryBackgroundColor = "#FFFFFF" # cards/containers
+textColor = "#111827"                # near-black text
+font = "sans serif"
