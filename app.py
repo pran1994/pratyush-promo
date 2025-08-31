@@ -9,37 +9,30 @@ st.set_page_config(page_title="Promotion Dashboard — Pratyush Ranjan", page_ic
 # ---------- Styles ----------
 st.markdown("""
 <style>
-/* Force a light color scheme so dark-mode users don't get light text */
 :root { color-scheme: light; }
 
 /* Exterior area */
 html, body, [data-testid="stAppViewContainer"], .main {
-    background-color: rgba(252, 251, 247, 0.5) !important; /* #FCFBF7 @ 50% */
-    color: #111827 !important; /* slate-900 equivalent for strong contrast */
+  background-color: rgba(252, 251, 247, .5) !important; /* #FCFBF7 @ 50% */
+  color: #111827 !important;
 }
 
 /* Interior content area */
-.block-container { 
-    max-width: 1200px; 
-    background-color: #FCFBF7;
-    color: #111827 !important;
+.block-container {
+  max-width: 1200px;
+  background-color: #FCFBF7;
+  color: #111827 !important;
 }
 
-/* Make common text elements clearly readable regardless of theme */
-h1, h2, h3, h4, h5, h6, p, li, span, div, label, code, pre, blockquote {
-    color: #111827 !important;
-}
+/* Readable defaults */
+h1, h2, h3, h4, h5, h6, p, li, span, div, label, code, pre, blockquote { color: #111827 !important; }
 a { color: #4F46E5 !important; }
-small, .caption, .stCaption, .st-emotion-cache-1n76uvr { color: #475569 !important; }
 
-/* Utility & layout */
 .section-title { font-size:20px; font-weight:700; margin:0 0 8px 0; }
 .divider-dark { height: 2px; background: #444; margin: 10px 0 16px 0; border-radius: 999px; }
-
 .pill { display:inline-flex; align-items:center; gap:6px; padding:6px 12px; border-radius:999px;
         background:#4F46E515; color:#4F46E5; font-weight:600; font-size:12px; margin-right:6px; }
-.tag { display:inline-block; font-size:12px; padding:3px 8px; border-radius:999px;
-       border:1px solid #e5e7eb; margin-right:6px; color:#475569 !important; }
+.tag { display:inline-block; font-size:12px; padding:3px 8px; border-radius:999px; border:1px solid #e5e7eb; margin-right:6px; color:#475569 !important; }
 blockquote { margin:0; font-size:14px; color:#334155 !important; }
 hr { border: none; border-top: 1px solid #e5e7eb; margin: 10px 0; }
 @media (max-width: 900px){ .block-container{ padding-left:14px; padding-right:14px; } }
@@ -47,13 +40,27 @@ hr { border: none; border-top: 1px solid #e5e7eb; margin: 10px 0; }
 """, unsafe_allow_html=True)
 
 # ---------- Load content ----------
-def load_content(path="data/content.json"):
+HERE = os.path.dirname(os.path.abspath(__file__))
+DEFAULT_CONTENT_PATH = os.path.join(HERE, "data", "content.json")
+
+def load_content(path=DEFAULT_CONTENT_PATH):
+    # Allow override via env var if needed (useful on Streamlit Cloud)
+    path = os.environ.get("CONTENT_JSON_PATH", path)
+
     if not os.path.exists(path):
-        st.error("data/content.json not found. Create it and restart.")
+        st.error(f"content.json not found at: {path}. Make sure your repo has data/content.json (or set CONTENT_JSON_PATH).")
         st.stop()
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
-C = load_content()
+
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception as e:
+        st.error(f"Failed to parse JSON at {path}: {e}")
+        st.stop()
+
+    return data, path
+
+C, CONTENT_PATH = load_content()
 
 # ---------- Helpers ----------
 SECTION_ICONS = {"Overview":"📌","Relationship Building":"🤝","Problem Solving":"🧩",
@@ -189,10 +196,17 @@ tabs = st.tabs(["Feedback", "Growth Plan"])
 with tabs[0]:
     st.subheader("Feedback")
     st.markdown("<div class='divider-dark'></div>", unsafe_allow_html=True)
-    fs = C.get("feedback_section", {})
+
+    fs = C.get("feedback_section", {}) if isinstance(C, dict) else {}
     quotes = fs.get("quotes", []) if isinstance(fs, dict) else []
+
     if not quotes:
         st.info("No feedback quotes available yet.")
+        # --- Minimal debug aid (only shows when empty) ---
+        with st.expander("Debug (only you see this)"):
+            st.caption(f"Reading JSON from: {CONTENT_PATH}")
+            st.caption(f"Top-level keys: {list(C.keys())}")
+            st.caption(f"feedback_section keys: {list(fs.keys()) if isinstance(fs, dict) else 'N/A'}")
     else:
         for q in quotes:
             quote = str(q.get("quote","")).strip()

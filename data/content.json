@@ -59,10 +59,10 @@
       "label": "AEMO Sales Pitch"
     },
     {
-      "lane": "Internal — dbt Pathway",
+      "lane": "Internal — dbt Pathway and dbt Architect Cert",
       "start": "2025-07-01",
       "end": null,
-      "label": "DBT Pathway (ongoing)"
+      "label": "DBT Pathway and dbt Architect Cert (ongoing)"
     }
   ],
   "feedback": [
@@ -79,95 +79,35 @@
       "text": "Uses structured thinking to diagnose issues (grain/GDP/GST) and prioritises correctly under time pressure."
     }
   ],
-"feedback_section": {
-    "good": [
+  "feedback_section": {
+    "quotes": [
       {
-        "title": "Trusted delivery lead across multi-stakeholder environments",
-        "context": "Ran AP reporting workstream end-to-end; established cadence, locked requirements in Confluence, and handed off cleanly to client team.",
-        "tag": "Delivery Leadership",
-        "evidence_points": [
-          "Australia Post — led reporting/dashboarding workstream from inception to handover; aligned delivery to business expectations.",
-          "Structured requirement-gathering; consolidated SME inputs in Confluence; proactively secured sign-off across teams.",
-          "Designed workable solutions within DOMO migration constraints without upstream engineering changes."
-        ]
+        "quote": "Overall, I think you are ready to take the next step into a senior role. You have shown the right skills, attitude and curiosity, and with more chances to lead initiatives in your current project, you will be in a good position to make that move. It is always fun working with you on projects, and I look forward to working with you again in the future. All the best!!!",
+        "name": "Avi Tripathi"
       },
       {
-        "title": "Clear, audience-aware communication",
-        "context": "Business storytelling at SteerCo vs. technical deep-dives with SMEs; live walkthroughs to capture & apply feedback real-time.",
-        "tag": "Communication",
-        "evidence_points": [
-          "AP — Presented regularly to Program Sponsor/Manager + SMEs; adapted style to technical depth.",
-          "SteerCo-style roll-off doc summarising delivery, expectations, and recommendations for AP internal team.",
-          "Live dashboard/logic walkthroughs with real-time feedback integration."
-        ]
+        "quote": "Overall, he has a good mix of technical strength, problem-solving skills, and attitude to step up into a Senior Consultant role. With the right exposure, I have no doubt he will continue to grow into the more consultative aspects of the role.",
+        "name": "Ramya Mokshagundam"
       },
       {
-        "title": "Structured problem solving under pressure",
-        "context": "IAG SVOF ELT: diagnosed grain misalignment (GDP/GST), reworked transformation flow with Lead Analytics Engineer, and kept stakeholders aligned.",
-        "tag": "Problem Solving",
-        "evidence_points": [
-          "Identified mismatch in grain between Mantel & KPMG logic during GDP transformation; fixed to stabilise downstream calcs.",
-          "Restructured ELT flow with Lead Analytics Engineer to ensure correct logic & grain for ATO reporting.",
-          "Used SQL + GenAI to accelerate GST debugging; maintained momentum while reducing extended QA cycles."
-        ]
+        "quote": "Pratyush is an excellent operator and we built a strong rapport over the time that we worked together. Pratyush also did a great job of representing himself to the client and left a very positive opinion of himself, Mantel, and the work delivered.",
+        "name": "Adam MacLeod"
       },
       {
-        "title": "Innovative use of AI/ML in delivery",
-        "context": "Applied GenAI solutions to streamline complex ETL processes, accelerating delivery while maintaining quality.",
-        "tag": "Innovation",
-        "evidence_points": [
-          "At IAG, leveraged LLM-powered code translation to automate legacy ETL logic updates, reducing manual effort by 70%.",
-          "Integrated AI-assisted debugging in GDP/GST transformations, cutting QA cycles significantly.",
-          "Demonstrated how emerging AI tools can be embedded into delivery workflows without disrupting BAU."
-        ]
-      }
-    ],
-    "improve": [
-      {
-        "title": "Broaden DS/ML exposure beyond analytics & ELT",
-        "was": "Earlier feedback suggested increasing hands‑on involvement in DS/ML initiatives.",
-        "now": "Contributed to AI/ML pre‑sales (AEMO) and built an internal enablement path to support consultants; applying advanced analysis patterns in delivery.",
-        "evidence_points": [
-          "AEMO — led proposal direction and prepared tailored deck; advanced pre‑sales discussion.",
-          "Internal enablement — created materials/patterns to guide consultants on AI/ML use‑cases."
-        ]
+        "quote": "I spoke with Dulce yesterday and she highlighted your commitment to providing an above and beyond excellent client experience especially over the migration weekend",
+        "name": "Linda Connolly"
       },
       {
-        "title": "Proactive stakeholder updates during blockers",
-        "was": "Need to ensure consistent, transparent updates to keep momentum when leads are unavailable.",
-        "now": "At IAG, stepped in during Adam’s leave: ran stand‑ups, chased KPMG on Huon inputs, set clear expectations on roles/dependencies, maintained delivery pace.",
-        "evidence_points": [
-          "Hosted stand‑ups; created/maintained blocker lists; followed up with KPMG on premium‑table inputs.",
-          "Escalated missing data to vendor instead of backfilling internally to protect data integrity."
-        ]
+        "quote": "In my previous feedback, I noted that you could improve your Influential Leadership by guiding AusPost to make timely and good decisions based on workarounds. You’ve definitely taken this feedback on board, and I now see you actively and consistently doing that. Well done!",
+        "name": "Dulce Schwanke"
       },
       {
-        "title": "Strengthen commercial craft",
-        "was": "Limited track record on leading proposals end‑to‑end.",
-        "now": "Drove direction for AEMO proposal (tailored slides + Confluence pack) and supported EPA/TfNSW RFQs; clarified delivery approach, timelines, and outcomes.",
-        "evidence_points": [
-          "AEMO — created client‑specific slides + Confluence to articulate approach and outcomes.",
-          "EPA/TfNSW — contributed to scoping and assumptions by gathering inputs from principals and delivery leads."
-        ]
+        "quote": "I wanted to take a moment to thank you for your valuable contributions to the GST Analytics project. Your hard work and dedication have made a significant impact, and we truly appreciate everything you've done.",
+        "name": "Vinny Wong, Manager, IAG"
       },
       {
-        "title": "Deepen technical depth (Adam’s feedback)",
-        "was": "Manager feedback highlighted the need to become more technical to operate at the next level.",
-        "now": "Bridging that gap by pursuing dbt Architect certification and leading the internal ‘dbt Pathway’ initiative.",
-        "evidence_points": [
-          "Internal — curated dbt Pathway and applied dbt design patterns for reuse.",
-          "Active study plan towards dbt certification, aligning with current IAG/AP transformation experience."
-        ]
-      }
-    ],
-    "testimonials": [
-      {
-        "name": "Leah Feng",
-        "title": "Insights Analyst",
-        "org": "Australia Post",
-        "quote": "A special shout-out to Avi and Pratyush… it’s been great collaborating with you both.",
-        "image": "data/assets/leah_ap_thanks.png",
-        "image_caption": "Client email — Australia Post"
+        "quote": "Just wanted to drop a quick note to say a big thank you for all support and hardwork on this project.It's been awesome working with you, and we really appreciate everything you've done. A special shoutout to Avi and Pratyush for their contribution.",
+        "name": "Leah Feng, Australia Post"
       }
     ]
   },
@@ -266,7 +206,7 @@
     {
       "title": "Internal Initiatives",
       "metric": "Pathway to learn dbt (WIP)",
-      "context": "Designed a structured learning pathway for teams to adopt dbt, including curated resources, onboarding guides, and example projects. This initiative is currently a work in progress."
+      "context": "Designing a structured learning pathway for teams to adopt dbt, including curated resources, onboarding guides, and example projects."
     }
   ]
 }
