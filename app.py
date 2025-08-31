@@ -220,8 +220,3 @@ with tabs[1]:
     for g in C.get("growth", []):
         st.markdown(f"- {g}")
 
-# ---------- Appendix ----------
-st.markdown("<div class='section-title'>Appendix</div>", unsafe_allow_html=True)
-st.markdown("<div class='divider-dark'></div>", unsafe_allow_html=True)
-st.caption("(No appendix image available)")
-st.markdown("<div class='divider-dark'></div>", unsafe_allow_html=True)
