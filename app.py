@@ -244,7 +244,7 @@ with cols[1]:
         "I am a Business Technical Consultant with 5+ years’ experience driving key data transformations across finance, insurance, logistics, and sports. "
         "I've worked with organisations like Vanguard, IAG, Australia Post and the AFL. "
         "Here's a quick summary of how I fulfil all the metrics of a Senior Consultant who works at Mantel."
-        "</div>",
+        "</div><br>",
         unsafe_allow_html=True
     )
     # bullets from prompt
