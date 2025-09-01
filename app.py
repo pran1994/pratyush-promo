@@ -238,12 +238,12 @@ with cols[0]:
     if pic:
         st.image(pic, use_container_width=True)
 with cols[1]:
-    st.markdown("<h1>Hi, I am Pratyush</h1>", unsafe_allow_html=True)
+    st.markdown("<h1>Hi, I am Pratyush! 👋 </h1>", unsafe_allow_html=True)
     st.markdown(
         "<div class='intro-lead'>"
-        "I am a Business Technical Consultant with 5+ years’ experience driving key data transformations across finance, insurance, logistics, and sports. "
-        "I've worked with organisations like Vanguard, IAG, Australia Post and the AFL. "
-        "Here's a quick summary of how I fulfil all the metrics of a Senior Consultant who works at Mantel."
+        "I am a Business Technical Consultant with over five years of experience leading key data transformations across finance, insurance, logistics, and sports. "
+        "I have worked with organisations such as Vanguard, IAG, Australia Post, and the AFL."
+        " Here is a quick summary of how I meet the criteria for a Senior Consultant at Mantel."
         "</div><br>",
         unsafe_allow_html=True
     )
