@@ -50,19 +50,25 @@
       "lane": "Client — IAG",
       "start": "2025-03-15",
       "end": "2025-07-15",
-      "label": "IAG — SVOF ELT"
+      "label": "IAG"
     },
     {
-      "lane": "Client — AEMO (Pre‑sales)",
+      "lane": "Client — AEMO",
       "start": "2025-07-01",
       "end": "2025-07-23",
-      "label": "AEMO Sales Pitch"
+      "label": "AEMO"
     },
     {
       "lane": "Internal — dbt Pathway and dbt Architect Cert",
       "start": "2025-07-01",
       "end": null,
       "label": "DBT Pathway and dbt Architect Cert (ongoing)"
+    },
+    {
+      "lane": "Client — Vanguard",
+      "start": "2025-08-14",
+      "end": null,
+      "label": "Vanguard"
     }
   ],
   "feedback": [
