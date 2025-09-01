@@ -277,10 +277,21 @@ if highs:
     cols = st.columns(min(3, len(highs)))
     for i, h in enumerate(highs):
         with cols[i % len(cols)]:
-            st.markdown(f"**{h.get('title','')}**")
-            meta = h.get("metric", ""); ctx = h.get("context","")
-            if meta: st.markdown(f"<span class='tag'>{meta}</span>", unsafe_allow_html=True)
-            if ctx:  st.markdown(f"<div style='margin:.25rem 0 1rem 0; color:#475569;'>{ctx}</div>", unsafe_allow_html=True)
+            title = h.get('title','')
+            meta = h.get('metric', '')
+            ctx = h.get('context','')
+            link = h.get('link', '')
+            
+            # Display title without link
+            st.markdown(f"**{title}**")
+                
+            if meta: 
+                st.markdown(f"<span class='tag'>{meta}</span>", unsafe_allow_html=True)
+            if ctx:  
+                st.markdown(f"<div style='margin:.25rem 0 1rem 0; color:#475569;'>{ctx}</div>", unsafe_allow_html=True)
+            # Add link below description if available
+            if link:
+                st.markdown(f"[Link]({link})")
 else:
     st.caption("No highlights available yet.")
 

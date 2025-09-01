@@ -205,14 +205,15 @@
       "context": "Delivered business-critical solutions on time with smooth BAU transitions."
     },
     {
-      "title": "Operational Efficiency Gains",
+      "title": "Operational Efficiency Gains", 
       "metric": "Reduced manual code changes to legacy code using LLM",
       "context": "Leveraged LLM-powered code translation to automate and simplify complex ETL scripts for legacy source systems, reducing manual development effort by 70% and accelerating time-to-insight for business stakeholders."
     },
     {
       "title": "Internal Initiatives",
       "metric": "Pathway to learn dbt (WIP)",
-      "context": "Designing a structured learning pathway for teams to adopt dbt, including curated resources, onboarding guides, and example projects."
+      "context": "Designing a structured learning pathway for teams to adopt dbt, including curated resources, onboarding guides, and example projects.",
+      "link": "https://mantelgroup.atlassian.net/wiki/spaces/DTD/pages/5775491539/Pathway+to+learn+-+AE+WIP"
     }
   ]
 }
