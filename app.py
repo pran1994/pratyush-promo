@@ -37,8 +37,8 @@ body { background-color: #FCFBF7; }
 .intro-lead { color:#374151; font-size:15px; line-height:1.35; }
 
 /* deep-dive spacing: clear visual separation from coloured rule */
-.dd-sep { height:6px; }
-.dd-rule { height:4px; border-radius:999px; margin:12px 0 22px 0; }
+.dd-sep { height:24px; }  /* increased from 6px to 24px for more space above colored line */
+.dd-rule { height:4px; border-radius:999px; margin:4px 0 22px 0; }  /* reduced top margin from 8px to 4px */
 
 /* small helper for logo column in timeline */
 .logo-cell { text-align:center; }
