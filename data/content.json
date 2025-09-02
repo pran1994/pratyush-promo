@@ -115,6 +115,44 @@
         "quote": "Just wanted to drop a quick note to say a big thank you for all support and hardwork on this project.It's been awesome working with you, and we really appreciate everything you've done. A special shoutout to Avi and Pratyush for their contribution.",
         "name": "Leah Feng, Australia Post"
       }
+    ],
+    "improve": [
+      {
+        "title": "Broaden DS/ML exposure beyond analytics & ELT",
+        "was": "Earlier feedback suggested increasing hands‑on involvement in DS/ML initiatives.",
+        "now": "Contributed to AI/ML pre‑sales (AEMO) and built an internal enablement path to support consultants; applying advanced analysis patterns in delivery.",
+        "evidence_points": [
+          "AEMO — led proposal direction and prepared tailored deck; advanced pre‑sales discussion.",
+          "Internal enablement — created materials/patterns to guide consultants on AI/ML use‑cases."
+        ]
+      },
+      {
+        "title": "Proactive stakeholder updates during blockers",
+        "was": "Need to ensure consistent, transparent updates to keep momentum when leads are unavailable.",
+        "now": "At IAG, stepped in during Adam's leave: ran stand‑ups, chased KPMG on Huon inputs, set clear expectations on roles/dependencies, maintained delivery pace.",
+        "evidence_points": [
+          "Hosted stand‑ups; created/maintained blocker lists; followed up with KPMG on premium‑table inputs.",
+          "Escalated missing data to vendor instead of backfilling internally to protect data integrity."
+        ]
+      },
+      {
+        "title": "Strengthen commercial craft",
+        "was": "Limited track record on leading proposals end‑to‑end.",
+        "now": "Drove direction for AEMO proposal (tailored slides + Confluence pack) and supported EPA/TfNSW RFQs; clarified delivery approach, timelines, and outcomes.",
+        "evidence_points": [
+          "AEMO — created client‑specific slides + Confluence to articulate approach and outcomes.",
+          "EPA/TfNSW — contributed to scoping and assumptions by gathering inputs from principals and delivery leads."
+        ]
+      },
+      {
+        "title": "Deepen technical depth (Adam's feedback)",
+        "was": "Manager feedback highlighted the need to become more technical to operate at the next level.",
+        "now": "Bridging that gap by pursuing dbt Architect certification and leading the internal 'dbt Pathway' initiative.",
+        "evidence_points": [
+          "Internal — curated dbt Pathway and applied dbt design patterns for reuse.",
+          "Active study plan towards dbt certification, aligning with current IAG/AP transformation experience."
+        ]
+      }
     ]
   },
   "matrix": {
@@ -205,15 +243,14 @@
       "context": "Delivered business-critical solutions on time with smooth BAU transitions."
     },
     {
-      "title": "Operational Efficiency Gains", 
+      "title": "Operational Efficiency Gains",
       "metric": "Reduced manual code changes to legacy code using LLM",
       "context": "Leveraged LLM-powered code translation to automate and simplify complex ETL scripts for legacy source systems, reducing manual development effort by 70% and accelerating time-to-insight for business stakeholders."
     },
     {
       "title": "Internal Initiatives",
       "metric": "Pathway to learn dbt (WIP)",
-      "context": "Designing a structured learning pathway to help teams adopt dbt, complete with curated resources, onboarding guides, and example projects. In addition, I am actively involved in multiple pre-sales activities.",
-      "link": "https://mantelgroup.atlassian.net/wiki/spaces/DTD/pages/5775491539/Pathway+to+learn+-+AE+WIP"
+      "context": "Designing a structured learning pathway for teams to adopt dbt, including curated resources, onboarding guides, and example projects."
     }
   ]
 }

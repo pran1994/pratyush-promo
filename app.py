@@ -34,11 +34,63 @@ body { background-color: #FCFBF7; }
 
 /* intro block (no card/box) */
 .intro-wrap h1 { font-size:34px; margin:0 0 8px 0; }
-.intro-lead { color:#374151; font-size:15px; line-height:1.35; }
+.intro-lead { 
+    color:#374151; 
+    font-size:15px; 
+    line-height:1.35; 
+    margin-bottom:16px;  /* Reduced from 28px to 16px */
+}
+.intro-bullets {
+    color:#374151;
+    font-size:15px;
+    line-height:1.35;
+    margin-top:16px;    /* Reduced from 28px to 16px */
+}
+.intro-bullets ul {
+    margin:0;
+    padding-left:20px;
+}
 
-/* deep-dive spacing: clear visual separation from coloured rule */
-.dd-sep { height:24px; }  /* increased from 6px to 24px for more space above colored line */
-.dd-rule { height:4px; border-radius:999px; margin:4px 0 22px 0; }  /* reduced top margin from 8px to 4px */
+/* deep-dive spacing */
+.dd-sep { height:6px; }
+.dd-rule { height:4px; border-radius:999px; margin:12px 0 22px 0; }
+
+.badge { 
+    display:inline-block; 
+    font-size:11px; 
+    padding:2px 8px; 
+    border-radius:999px; 
+}
+.badge-was { 
+    background:#fee2e2; 
+    color:#b91c1c; 
+    border:1px solid #fecaca; 
+}
+.badge-now { 
+    background:#dcfce7; 
+    color:#166534; 
+    border:1px solid #bbf7d0; 
+}
+.card { 
+    background:#FCFBF7;  /* Match the overall background color */
+    border:1px solid #e5e7eb; 
+    border-radius:16px; 
+    padding:16px; 
+    box-shadow:0 1px 3px rgba(0,0,0,.04);
+    margin-bottom: 12px;  /* Add spacing between cards */
+}
+/* Tab styling */
+.big-tab-header {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+.small-tab-header {
+    font-size: 16px;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 12px;
+}
 
 /* small helper for logo column in timeline */
 .logo-cell { text-align:center; }
@@ -215,7 +267,7 @@ def timeline_gantt_with_logo_axis(ranges):
 # ────────────────────────────────────────────────────────────────────────────────
 st.markdown("""
 <div class="hero">
-  <h1 style="margin:0 0 6px 0;">🌟 Promotion Summary</h1>
+  <h1 style="margin:0 0 6px 0;">🌟 Promotion Dashboard</h1>
   <div style="color:#475569; font-size:14px;">{summary}</div>
   <div style="margin-top:10px;">
     <span class="pill">Delivery Leadership</span>
@@ -238,16 +290,18 @@ with cols[0]:
     if pic:
         st.image(pic, use_container_width=True)
 with cols[1]:
-    st.markdown("<h1>Hi, I am Pratyush! 👋 </h1>", unsafe_allow_html=True)
+    st.markdown("<h1>Hi, I am Pratyush</h1>", unsafe_allow_html=True)
     st.markdown(
         "<div class='intro-lead'>"
-        "I am a Business Technical Consultant with over five years of experience leading key data transformations across finance, insurance, logistics, and sports. "
-        "I have worked with organisations such as Vanguard, IAG, Australia Post, and the AFL."
-        " Here is a quick summary of how I meet the criteria for a Senior Consultant at Mantel."
-        "</div><br>",
+        "I am a Business Technical Consultant with 5+ years' experience driving key data transformations across finance, insurance, logistics, and sports. "
+        "I've worked with organisations like Vanguard, IAG, Australia Post and the AFL. "
+        "Here's a quick summary of how I fulfil all the metrics of a Senior Consultant who works at Mantel."
+        "</div>",
         unsafe_allow_html=True
     )
+    
     # bullets from prompt
+    st.markdown("<div class='intro-bullets'>", unsafe_allow_html=True)
     bullets = [
         "Data & AI Delivery Leadership: Run complex reporting and transformation streams end-to-end, from scoping to clean client handover.",
         "Stakeholder Engagement: Trusted by senior stakeholders for clear communication and proactive updates, even in high-pressure situations.",
@@ -258,47 +312,37 @@ with cols[1]:
     ]
     for b in bullets:
         st.markdown(f"- {b}")
+    st.markdown("</div>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
 
 # ────────────────────────────────────────────────────────────────────────────────
 # Journey Timeline (with logo axis)
 # ────────────────────────────────────────────────────────────────────────────────
-st.markdown("<div class='section-title'>Journey at Mantel 🛤️</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-title'>Journey at Mantel</div>", unsafe_allow_html=True)
 st.markdown("<div class='divider-dark'></div>", unsafe_allow_html=True)
 timeline_gantt_with_logo_axis(C.get("timeline_ranges", []))
 
 # ────────────────────────────────────────────────────────────────────────────────
 # Highlights (kept concise)
 # ────────────────────────────────────────────────────────────────────────────────
-st.markdown("<div class='section-title'>Highlights ✨</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-title'>Highlights</div>", unsafe_allow_html=True)
 st.markdown("<div class='divider-dark'></div>", unsafe_allow_html=True)
 highs = C.get("highlights", [])
 if highs:
     cols = st.columns(min(3, len(highs)))
     for i, h in enumerate(highs):
         with cols[i % len(cols)]:
-            title = h.get('title','')
-            meta = h.get('metric', '')
-            ctx = h.get('context','')
-            link = h.get('link', '')
-            
-            # Display title without link
-            st.markdown(f"**{title}**")
-                
-            if meta: 
-                st.markdown(f"<span class='tag'>{meta}</span>", unsafe_allow_html=True)
-            if ctx:  
-                st.markdown(f"<div style='margin:.25rem 0 1rem 0; color:#475569;'>{ctx}</div>", unsafe_allow_html=True)
-            # Add link below description if available
-            if link:
-                st.markdown(f"[Link]({link})")
+            st.markdown(f"**{h.get('title','')}**")
+            meta = h.get("metric", ""); ctx = h.get("context","")
+            if meta: st.markdown(f"<span class='tag'>{meta}</span>", unsafe_allow_html=True)
+            if ctx:  st.markdown(f"<div style='margin:.25rem 0 1rem 0; color:#475569;'>{ctx}</div>", unsafe_allow_html=True)
 else:
     st.caption("No highlights available yet.")
 
 # ────────────────────────────────────────────────────────────────────────────────
 # KPI Deep-Dives
 # ────────────────────────────────────────────────────────────────────────────────
-st.markdown("<div class='section-title'>KPI Deep-Dives 📊</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-title'>KPI Deep-Dives</div>", unsafe_allow_html=True)
 st.markdown("<div class='divider-dark'></div>", unsafe_allow_html=True)
 matrix = C.get("matrix", {})
 if matrix:
@@ -320,11 +364,11 @@ else:
     st.caption("No KPI details available yet.")
 
 # ────────────────────────────────────────────────────────────────────────────────
-# Certifications & Achievements 🏆 + Client Quote
+# Certifications & Achievements + Client Quote
 # ────────────────────────────────────────────────────────────────────────────────
 ach = C.get("achievements", [])
 if ach:
-    st.markdown("<div class='section-title'>Certifications & Achievements 🏆</div>", unsafe_allow_html=True)
+    st.markdown("<div class='section-title'>Certifications & Achievements</div>", unsafe_allow_html=True)
     st.markdown("<div class='divider-dark'></div>", unsafe_allow_html=True)
     cols = st.columns(min(3, len(ach)))
     for i, a in enumerate(ach):
@@ -352,20 +396,44 @@ if ach:
 tabs = st.tabs(["Feedback", "Growth Plan"])
 
 with tabs[0]:
-    st.subheader("Feedback 💬")
+    # What people say section
+    st.markdown("<div class='section-title'>What people say 🗣️</div>", unsafe_allow_html=True)
     st.markdown("<div class='divider-dark'></div>", unsafe_allow_html=True)
     fs = C.get("feedback_section", {})
     quotes = fs.get("quotes", []) if isinstance(fs, dict) else []
     if quotes:
         for q in quotes:
             who = " — ".join([x for x in [q.get("name"), q.get("org")] if x])
-            st.markdown(f"> “{q.get('quote','')}”  \n— **{who}**")
+            st.markdown(f'> "{q.get("quote","")}"  \n— **{who}**')
             st.write("")
     else:
         st.info("No feedback quotes available yet.")
+        
+    # Add spacing between sections
+    st.write("")
+    
+    # Incorporating Feedback section
+    st.markdown("<div class='section-title'>Incorporating Feedback 💬 + 🔄</div>", unsafe_allow_html=True)
+    st.markdown("<div class='divider-dark'></div>", unsafe_allow_html=True)
+    
+    for card in fs.get("improve", []):
+        st.markdown(f"**{card.get('title','')}**")
+        was = card.get("was","")
+        now = card.get("now","")
+        if was: st.markdown(f"<span class='badge badge-was'>Was</span> {was}", unsafe_allow_html=True)
+        if now: st.markdown(f"<span class='badge badge-now'>Now</span> {now}", unsafe_allow_html=True)
+        evp = card.get("evidence_points", []) or []
+        evs = card.get("evidence", "")
+        if evp or evs:
+            with st.expander("Evidence"):
+                if evp:
+                    for b in evp: st.markdown(f"- {b}")
+                elif evs:
+                    st.markdown(evs)
+        st.markdown(f"<div class='dd-sep'></div><div class='dd-rule' style='background:#6366F1'></div>", unsafe_allow_html=True)
 
 with tabs[1]:
-    st.subheader("Growth Plan 📈")
+    st.markdown("<div class='section-title'>Growth Plan 📈</div>", unsafe_allow_html=True)
+    st.markdown("<div class='divider-dark'></div>", unsafe_allow_html=True)
     for g in C.get("growth", []):
         st.markdown(f"- {g}")
-
