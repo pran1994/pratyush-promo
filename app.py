@@ -7,7 +7,7 @@ import streamlit as st
 # ────────────────────────────────────────────────────────────────────────────────
 # Page config
 # ────────────────────────────────────────────────────────────────────────────────
-st.set_page_config(page_title="Promotion Dashboard", page_icon="🌟", layout="wide")
+st.set_page_config(page_title="Promotion Summary", page_icon="🌟", layout="wide")
 
 # ────────────────────────────────────────────────────────────────────────────────
 # Styles
@@ -80,10 +80,20 @@ body { background-color: #FCFBF7; }
     margin-bottom: 12px;  /* Add spacing between cards */
 }
 /* Tab styling */
-.big-tab-header {
-    font-size: 24px;
-    font-weight: 600;
+.stTabs [data-baseweb="tab-list"] {
+    gap: 24px;
     margin-bottom: 16px;
+}
+.stTabs [data-baseweb="tab"] {
+    height: auto;
+    font-size: 64px !important;  /* Increased from 42px to 64px to match section headers */
+    font-weight: 700 !important;
+    color: #475569;
+    padding: 0;
+    line-height: 1.2 !important;  /* Added to improve spacing */
+}
+.stTabs [aria-selected="true"] {
+    color: #1f2937 !important;
 }
 .small-tab-header {
     font-size: 16px;
@@ -267,7 +277,7 @@ def timeline_gantt_with_logo_axis(ranges):
 # ────────────────────────────────────────────────────────────────────────────────
 st.markdown("""
 <div class="hero">
-  <h1 style="margin:0 0 6px 0;">🌟 Promotion Dashboard</h1>
+  <h1 style="margin:0 0 6px 0;">🌟 Promotion Summary</h1>
   <div style="color:#475569; font-size:14px;">{summary}</div>
   <div style="margin-top:10px;">
     <span class="pill">Delivery Leadership</span>
@@ -393,7 +403,8 @@ if ach:
 # ────────────────────────────────────────────────────────────────────────────────
 # Tabs: Feedback (quotes only) + Growth Plan
 # ────────────────────────────────────────────────────────────────────────────────
-tabs = st.tabs(["Feedback", "Growth Plan"])
+st.markdown("<div style='height: 40px'></div>", unsafe_allow_html=True)  # Add some spacing
+tabs = st.tabs(["📋 Feedback", "📈 Growth Plan"])
 
 with tabs[0]:
     # What people say section
