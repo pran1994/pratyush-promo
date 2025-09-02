@@ -215,7 +215,7 @@ def timeline_gantt_with_logo_axis(ranges):
 # ────────────────────────────────────────────────────────────────────────────────
 st.markdown("""
 <div class="hero">
-  <h1 style="margin:0 0 6px 0;">🌟 Promotion Dashboard</h1>
+  <h1 style="margin:0 0 6px 0;">🌟 Promotion Summary</h1>
   <div style="color:#475569; font-size:14px;">{summary}</div>
   <div style="margin-top:10px;">
     <span class="pill">Delivery Leadership</span>
@@ -263,14 +263,14 @@ st.markdown("</div>", unsafe_allow_html=True)
 # ────────────────────────────────────────────────────────────────────────────────
 # Journey Timeline (with logo axis)
 # ────────────────────────────────────────────────────────────────────────────────
-st.markdown("<div class='section-title'>Journey at Mantel</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-title'>Journey at Mantel 🛤️</div>", unsafe_allow_html=True)
 st.markdown("<div class='divider-dark'></div>", unsafe_allow_html=True)
 timeline_gantt_with_logo_axis(C.get("timeline_ranges", []))
 
 # ────────────────────────────────────────────────────────────────────────────────
 # Highlights (kept concise)
 # ────────────────────────────────────────────────────────────────────────────────
-st.markdown("<div class='section-title'>Highlights</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-title'>Highlights ✨</div>", unsafe_allow_html=True)
 st.markdown("<div class='divider-dark'></div>", unsafe_allow_html=True)
 highs = C.get("highlights", [])
 if highs:
@@ -298,7 +298,7 @@ else:
 # ────────────────────────────────────────────────────────────────────────────────
 # KPI Deep-Dives
 # ────────────────────────────────────────────────────────────────────────────────
-st.markdown("<div class='section-title'>KPI Deep-Dives</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-title'>KPI Deep-Dives 📊</div>", unsafe_allow_html=True)
 st.markdown("<div class='divider-dark'></div>", unsafe_allow_html=True)
 matrix = C.get("matrix", {})
 if matrix:
@@ -320,11 +320,11 @@ else:
     st.caption("No KPI details available yet.")
 
 # ────────────────────────────────────────────────────────────────────────────────
-# Certifications & Achievements + Client Quote
+# Certifications & Achievements 🏆 + Client Quote
 # ────────────────────────────────────────────────────────────────────────────────
 ach = C.get("achievements", [])
 if ach:
-    st.markdown("<div class='section-title'>Certifications & Achievements</div>", unsafe_allow_html=True)
+    st.markdown("<div class='section-title'>Certifications & Achievements 🏆</div>", unsafe_allow_html=True)
     st.markdown("<div class='divider-dark'></div>", unsafe_allow_html=True)
     cols = st.columns(min(3, len(ach)))
     for i, a in enumerate(ach):
@@ -352,7 +352,7 @@ if ach:
 tabs = st.tabs(["Feedback", "Growth Plan"])
 
 with tabs[0]:
-    st.subheader("Feedback")
+    st.subheader("Feedback 💬")
     st.markdown("<div class='divider-dark'></div>", unsafe_allow_html=True)
     fs = C.get("feedback_section", {})
     quotes = fs.get("quotes", []) if isinstance(fs, dict) else []
@@ -365,7 +365,7 @@ with tabs[0]:
         st.info("No feedback quotes available yet.")
 
 with tabs[1]:
-    st.subheader("Growth Plan")
+    st.subheader("Growth Plan 📈")
     for g in C.get("growth", []):
         st.markdown(f"- {g}")
 
