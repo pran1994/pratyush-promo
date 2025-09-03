@@ -304,7 +304,7 @@ with cols[0]:
     if pic:
         st.image(pic, use_container_width=True)
 with cols[1]:
-    st.markdown("<h1>Hi, I am Pratyush</h1>", unsafe_allow_html=True)
+    st.markdown("<h1>Hi, I am Pratyush!</h1>", unsafe_allow_html=True)
     st.markdown(
         "<div class='intro-lead'>"
         "I am a Business Technical Consultant with 5+ years' experience driving key data transformations across finance, insurance, logistics, and sports. "
