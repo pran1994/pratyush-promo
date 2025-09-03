@@ -119,29 +119,32 @@
     "improve": [
       {
         "title": "Broaden DS/ML exposure beyond analytics & ELT",
-        "was": "Earlier feedback suggested increasing hands‑on involvement in DS/ML initiatives.",
-        "now": "Contributed to AI/ML pre‑sales (AEMO) and built an internal enablement path to support consultants; applying advanced analysis patterns in delivery.",
+        "was": "Earlier feedback suggested increasing hands-on involvement in DS/ML initiatives to build capability beyond ETL and reporting.",
+        "now": "Contributed to AI/ML pre-sales (AEMO) and built an internal enablement pathway to support consultants, applying advanced analysis patterns in delivery.",
         "evidence_points": [
-          "AEMO — led proposal direction and prepared tailored deck; advanced pre‑sales discussion.",
-          "Internal enablement — created materials/patterns to guide consultants on AI/ML use‑cases."
+          "AEMO — Led proposal direction and prepared a tailored deck for pre-sales; engaged in advanced client discussions on AI/ML use-cases.",
+          "Internal Enablement — Created reusable patterns and materials to guide consultants in applying AI/ML solutions.",
+          "Applied in Delivery — Leveraged GenAI tooling to accelerate ELT logic development and reduce manual delivery time."
         ]
       },
       {
-        "title": "Proactive stakeholder updates during blockers",
-        "was": "Need to ensure consistent, transparent updates to keep momentum when leads are unavailable.",
-        "now": "At IAG, stepped in during Adam's leave: ran stand‑ups, chased KPMG on Huon inputs, set clear expectations on roles/dependencies, maintained delivery pace.",
+        "title": "Strengthen Influential Leadership in Client Engagements.",
+        "was": "Feedback highlighted the need to move beyond execution — guiding clients to make timely decisions, surfacing risks earlier, and shaping outcomes proactively.",
+        "now": "Took ownership in client-facing engagements, influencing decision-making, securing early sign-offs, and maintaining delivery momentum during leadership gaps.",
         "evidence_points": [
-          "Hosted stand‑ups; created/maintained blocker lists; followed up with KPMG on premium‑table inputs.",
-          "Escalated missing data to vendor instead of backfilling internally to protect data integrity."
+          "AusPost — Facilitated requirement workshops, consolidated SME inputs, and proactively secured sign-offs to align stakeholders early.",
+          "IAG — Represented Mantel independently during program lead’s absence; hosted stand-ups, managed blockers, and kept multiple vendors aligned.",
+          "Vanguard — Proactively explored opportunities within current delivery streams, positioning Mantel as a trusted partner for additional work."
         ]
       },
       {
-        "title": "Strengthen commercial craft",
-        "was": "Limited track record on leading proposals end‑to‑end.",
-        "now": "Drove direction for AEMO proposal (tailored slides + Confluence pack) and supported EPA/TfNSW RFQs; clarified delivery approach, timelines, and outcomes.",
+        "title": "Enhance Communication for Senior Stakeholders",
+        "was": "Feedback pointed to the need for clearer, more structured updates for leadership audiences — balancing technical depth with business storytelling.",
+        "now": "Regularly presented to senior sponsors and program managers, adapting communication style for audience type and creating SteerCo-style deliverables for clarity.",
         "evidence_points": [
-          "AEMO — created client‑specific slides + Confluence to articulate approach and outcomes.",
-          "EPA/TfNSW — contributed to scoping and assumptions by gathering inputs from principals and delivery leads."
+          "Australia Post — Delivered live walkthroughs of dashboards; created SteerCo-style documentation to summarise progress and outline recommendations for the internal team.",
+          "IAG — Adjusted storytelling between program sponsors (business outcomes) and SMEs (technical deep-dives), ensuring clarity across both groups.",
+          "Internal — Shared learnings from GenAI certification with peers, translating technical insights into actionable enablement content."
         ]
       },
       {
@@ -150,7 +153,7 @@
         "now": "Bridging that gap by pursuing dbt Architect certification and leading the internal 'dbt Pathway' initiative.",
         "evidence_points": [
           "Internal — curated dbt Pathway and applied dbt design patterns for reuse.",
-          "Active study plan towards dbt certification, aligning with current IAG/AP transformation experience."
+          "Active study plan towards dbt Architect certification."
         ]
       }
     ]

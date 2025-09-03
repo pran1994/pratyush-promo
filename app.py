@@ -52,8 +52,12 @@ body { background-color: #FCFBF7; }
 }
 
 /* deep-dive spacing */
-.dd-sep { height:6px; }
-.dd-rule { height:4px; border-radius:999px; margin:12px 0 22px 0; }
+.dd-sep { height: 2px; }                 /* was 6px */
+.dd-rule {
+    height: 4px;
+    border-radius: 999px;
+    margin: 24px 0 8px 0;   /* was 22px, now 8px */
+}
 
 .badge { 
     display:inline-block; 
@@ -427,21 +431,33 @@ with tabs[0]:
     st.markdown("<div class='section-title'>Incorporating Feedback 💬 + 🔄</div>", unsafe_allow_html=True)
     st.markdown("<div class='divider-dark'></div>", unsafe_allow_html=True)
     
-    for card in fs.get("improve", []):
+    improvements = fs.get("improve", [])
+    for i, card in enumerate(improvements):
         st.markdown(f"**{card.get('title','')}**")
         was = card.get("was","")
         now = card.get("now","")
-        if was: st.markdown(f"<span class='badge badge-was'>Was</span> {was}", unsafe_allow_html=True)
-        if now: st.markdown(f"<span class='badge badge-now'>Now</span> {now}", unsafe_allow_html=True)
+        if was:
+            st.markdown(f"<span class='badge badge-was'>Was</span> {was}", unsafe_allow_html=True)
+        if now:
+            st.markdown(f"<span class='badge badge-now'>Now</span> {now}", unsafe_allow_html=True)
+
         evp = card.get("evidence_points", []) or []
         evs = card.get("evidence", "")
         if evp or evs:
             with st.expander("Evidence"):
                 if evp:
-                    for b in evp: st.markdown(f"- {b}")
+                    for b in evp:
+                        st.markdown(f"- {b}")
                 elif evs:
                     st.markdown(evs)
-        st.markdown(f"<div class='dd-sep'></div><div class='dd-rule' style='background:#6366F1'></div>", unsafe_allow_html=True)
+
+        # ✅ Only show divider if this is NOT the last card
+        if i < len(improvements) - 1:
+            st.markdown(
+                f"<div class='dd-sep'></div><div class='dd-rule' style='background:#6366F1'></div>",
+                unsafe_allow_html=True
+            )
+
 
 with tabs[1]:
     st.markdown("<div class='section-title'>Growth Plan 📈</div>", unsafe_allow_html=True)
